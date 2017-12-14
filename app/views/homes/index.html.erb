@@ -1,0 +1,206 @@
+<div class="top-layer">
+  <!--页头 Begin-->
+  <div class="g-index-head">
+    <div class="top-menu">
+      <div>
+        <ul class="menu-nav">
+
+        </ul>
+        <script type="text/javascript">if (isLogin) {
+            $('.menu-nav .is_login').removeClass('hide');
+            $('.menu-nav .regis,.menu-nav .login').remove();
+            var info = _info_.split(',');
+            $("#account").text(info[0]);
+            $("#msg-num").text('（' + info[1] + '）');
+        }</script>
+      </div>
+    </div>
+    <div class="head">
+      <div>
+        <div class="logo clearfix">
+          <h1 style="margin:0;padding:0;display:inline"><a href="#" class="Head-logo">
+            <%= image_tag 'liushushu_logo_web.png',height:100 %>
+          </a></h1>
+          <div style="position: absolute;top: 22px;right: 110px;max-width:120px;max-height:50px;overflow:hidden">
+          </div>
+        </div>
+
+        <div class="nav-link">
+          <%= link_to '首页',homes_path,class:'active','data-no-turbolink'=>true %>
+          <%= link_to '最新资讯',infos_path %>
+          <%= link_to '工程案例',installs_path %>
+          <%= link_to '用户中心',services_path %>
+          <%= link_to '关于我们',actives_path %>
+          <%= link_to '帮助中心',abouts_path %>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--页头 End-->
+</div>
+<!--页头 End-->
+<div id="fullDiv">
+  <div id="side">
+    <ul id="menu">
+      <li data-menuanchor="w1" class="active" ><a class="a1" href="#w1" title="刘叔叔">1</a></li>
+      <li data-menuanchor="w2"><a class="a2" href="#w2" title="服务模式">2</a></li>
+      <li data-menuanchor="w3"><a class="a3" href="#w3" title="我们的优势">3</a></li>
+      <li data-menuanchor="w4"><a class="a4" href="#w4" title="互联网家居售后3.0">4</a></li>
+      <li data-menuanchor="w5"><a class="a5" href="#w5" title="用户心声">5</a></li>
+
+    </ul>
+  </div>
+
+  <div class="section section1">
+    <div class="s1-bg"></div>
+    <div class="s1-con">
+      <div class="s1-txt"><img src="../image/txt.png" alt="家居配送、安装、维修、返货直接找万师傅"></div>
+      <div class="s1-btn">
+
+      </div>
+    </div><!-- s1-con end -->
+  </div>
+  <div class="section section2">
+
+    <div id="s2-wrap-top">
+      <div class="s2-bg-btm-wrap"><div class="s2-bg-top"></div></div>
+      <div class="s2-top">
+        <div class="topleft"></div>
+        <div class="topright">
+          <div class="s2-null"></div>
+          <p class="t1"><img src="../image/t1.png" alt="让用户自由选择"/></p>
+          <p class="ts1"><img src="../image/ts1.png" alt="一个订单多个师傅报价，任意挑选"/></p>
+        </div>
+      </div>
+    </div>
+
+    <div id="s2-wrap-btm">
+      <div class="s2-bg-btm-wrap"><div class="s2-bg-btm"></div></div>
+      <div class="s2-btm">
+        <div class="btmleft">
+          <div class="s2-null"></div>
+          <p class="t2"><img src="../image/t2.png" alt="让师傅自主经营"/></p>
+          <p class="ts2"><img src="../image/ts2.png" alt="告别派单模式，师傅自由报价接单"/></p>
+        </div>
+        <div class="btmright"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section section3">
+    <div class="s3-bg"></div>
+    <div class="t1">
+      <img src="http://frontend.wanshifu.com/www/html/wan/images/sec3/you.png" alt="我们的优势">
+    </div>
+    <div class="btm">
+      <div class="s3-item">
+        <div class="service">
+          <ul>
+            <li class="ser1"><img src="../image/s3t1.png"/><p class="ser-txt">拥有百位经验丰富师傅<br/>让你有更多选择</p></li>
+            <li class="ser2"><img src="../image/s3t2.png"/><p class="ser-txt">只需要下单，师傅上门安装</p></li>
+            <li class="ser3"><img src="../image/s3t3.png"/><p class="ser-txt">不需监督，安装让你放心<br/>避免出行不便</p></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section section4" >
+    <div class="s4-bg"></div>
+    <div class="s4-con">
+      <div class="s4-top-layout">
+        <p class="shield"><img src="../image/sc4tt.png"/></p>
+        <p class="pro-service"><img src="../image/service.png"/></p>
+        <p class="pro-more"></p>
+      </div>
+      <div class="safe">
+        <ul>
+          <li class="ser1">
+            <img src="../image/s3c1.png"><img src="../image/s4t1.png"/>
+            <p class="ser-txt">我们只为让你放心 为安全提供保障</p>
+          </li>
+          <li class="ser2">
+            <img src="../image/s3c2.png"><img src="../image/s4t2.png"/>
+            <p class="ser-txt">诚信担保从下单到完工全程担保</p>
+          </li>
+        </ul>
+      </div>
+    </div><!-- s4-con end -->
+  </div>
+
+  <div class="section section5">
+    <!--<p class="u-voice"><img src="http://frontend.wanshifu.com/www/html/wan/images/sec5/voice.png"></p>-->
+    <div class="btm">
+      <div class="service">
+        <div class="slide">
+          <div class="feedback">
+            <div class="slidewraphead"><div id="slidehead" class="cir">
+
+            </div></div>
+
+
+            <div class="slidewrappos pos"><div id="slidepos">
+
+            </div></div>
+            <!--<img class="quotel" src="http://frontend.wanshifu.com/www/html/wan/images/sec5/ql.png">-->
+            <!--<img class="quoter" src="http://frontend.wanshifu.com/www/html/wan/images/sec5/qr.png">-->
+            <div class="slidewraptext text"><div id="slidetext">
+
+            </div></div>
+            <div class="slideleft"></div>
+            <div class="slideright"></div>
+          </div><!-- feedback -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+    <footer>
+      <div class="f-btm">
+        <div class="w1200">
+          <div class="copyright">
+            <span>&copy; 2017 刘叔叔版权所有</span>
+
+          </div>
+        </div><!-- w1200 end -->
+      </div>
+
+    </footer>  </div><!-- section6 end -->
+  <!--
+  <div class="section section7">
+    <h2 style="color:#ccc">section7</h2>
+  </div>
+
+  <div class="section section8">
+    <h2 style="color:#369">section8</h2>
+  </div>
+  -->
+</div><!-- full END -->
+<script>
+    $(function () {
+        $(".s1-item span").click(function(){
+            var cat=$(this).attr('rel');
+            var newhref='http://www.wanshifu.com/orders/task/publish?cat='+cat;
+            $('#order-master').attr('href',newhref);
+        });
+    })
+</script>    <!--页脚-->
+<ul class="float-menu">
+  <li class="new-order">
+    <a href="http://www.wanshifu.com/orders/task/publish">
+      <ul>
+        <li><h3>任务发布后</h3><p>3分钟内收到师傅报价</p></li>
+        <li><h3>每个任务</h3><p>平均5个报价可选择</p></li>
+        <li><h3>全国99%的地区</h3><p>任务得到完美解决</p></li>
+      </ul>
+    </a>
+  </li>
+  <li class="online-service"><a class="g-fix-middle_zx"></a></li>
+</ul>
+<!--页脚 End-->
+
+
+

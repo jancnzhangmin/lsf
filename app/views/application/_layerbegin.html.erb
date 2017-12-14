@@ -1,0 +1,67 @@
+<div class="top-layer">
+  <!--页头 Begin-->
+  <div class="g-index-head">
+    <div class="top-menu">
+      <div>
+        <ul class="menu-nav">
+
+        </ul>
+        <script type="text/javascript">if (isLogin) {
+            $('.menu-nav .is_login').removeClass('hide');
+            $('.menu-nav .regis,.menu-nav .login').remove();
+            var info = _info_.split(',');
+            $("#account").text(info[0]);
+            $("#msg-num").text('（' + info[1] + '）');
+        }</script>
+      </div>
+    </div>
+    <div class="head">
+      <div>
+        <div class="logo clearfix">
+          <h1 style="margin:0;padding:0;display:inline"><a href="#" class="Head-logo">
+            <%= image_tag 'liushushu_logo_web.png',height:100 %>
+          </a></h1>
+          <div style="position: absolute;top: 22px;right: 110px;max-width:120px;max-height:50px;overflow:hidden">
+          </div>
+        </div>
+
+        <div class="nav-link">
+          <% if @sites == 'home' %>
+          <%= link_to '首页',homes_path,class:'active' %>
+              <% else %>
+              <%= link_to '首页',homes_path %>
+              <% end %>
+          <% if @sites == 'info' %>
+              <%= link_to '最新资讯',infos_path,class:'active' %>
+          <% else %>
+              <%= link_to '最新资讯',infos_path %>
+          <% end %>
+          <% if @sites == 'install' %>
+              <%= link_to '工程案例',installs_path,class:'active' %>
+          <% else %>
+              <%= link_to '工程案例',installs_path %>
+          <% end %>
+          <% if @sites == 'service' %>
+              <%= link_to '用户中心',services_path,class:'active' %>
+          <% else %>
+              <%= link_to '用户中心',services_path %>
+          <% end %>
+          <% if @sites == 'active' %>
+              <%= link_to '关于我们',actives_path,class:'active' %>
+          <% else %>
+              <%= link_to '关于我们',actives_path %>
+          <% end %>
+          <% if @sites == 'about' %>
+              <%= link_to '帮助中心',abouts_path,class:'active' %>
+          <% else %>
+              <%= link_to '帮助中心',abouts_path %>
+          <% end %>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--页头 End-->
+</div>
+<!--页头 End-->
