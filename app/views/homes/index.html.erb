@@ -1,45 +1,101 @@
-<div class="top-layer">
-  <!--页头 Begin-->
-  <div class="g-index-head">
-    <div class="top-menu">
-      <div>
-        <ul class="menu-nav">
-
-        </ul>
-        <script type="text/javascript">if (isLogin) {
-            $('.menu-nav .is_login').removeClass('hide');
-            $('.menu-nav .regis,.menu-nav .login').remove();
-            var info = _info_.split(',');
-            $("#account").text(info[0]);
-            $("#msg-num").text('（' + info[1] + '）');
-        }</script>
-      </div>
+<style>
+    .navbar-brand {
+        width: 110px;
+        height: auto;
+        padding: 7.5px 15px;
+    }
+    .navbar-brand__img {
+        width: 100%;
+    }
+    .navbar-toggle {
+        margin-top: 17px;
+        margin-bottom: 17px;
+    }
+    .navbar-collapse>ul>li>a {
+        display: inline-block;
+        height: 82px;
+        text-align: center;
+        font-size: 16px;
+        text-decoration: none;
+        color: #fff;
+        vertical-align: top;
+        margin: 0 21px;
+        padding: 30px 10px 10px 5px;
+        position: relative;
+    }
+    .nav > li > a:hover, .nav > li > a:focus {
+        text-decoration: none;
+        background-color: inherit;
+        color: #0081cc;
+    }
+    .active {
+        color: #0081cc;
+    }
+</style>
+<nav class="navbar navbar-fixed-top  navbar-without-shadow" style="background-color: rgba(0,0,0,0.7);">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" >
+        <span class="sr-only">导航</span>
+        <span class="icon-bar" style="background: #fff;"></span>
+        <span class="icon-bar" style="background: #fff;"></span>
+        <span class="icon-bar" style="background: #fff;"></span>
+      </button>
+      <a class="navbar-brand" href="/">
+        <%= image_tag 'liushushu_logo_web.png',class:"navbar-brand__img"%>
+      </a>
     </div>
-    <div class="head">
-      <div>
-        <div class="logo clearfix">
-          <h1 style="margin:0;padding:0;display:inline"><a href="#" class="Head-logo">
-            <%= image_tag 'liushushu_logo_web.png',height:100 %>
-          </a></h1>
-          <div style="position: absolute;top: 22px;right: 110px;max-width:120px;max-height:50px;overflow:hidden">
-          </div>
-        </div>
 
-        <div class="nav-link">
-          <%= link_to '首页',homes_path,class:'active','data-no-turbolink'=>true %>
-          <%= link_to '最新资讯',infos_path %>
-          <%= link_to '工程案例',installs_path %>
-          <%= link_to '用户中心',services_path %>
-          <%= link_to '关于我们',actives_path %>
-          <%= link_to '帮助中心',abouts_path %>
-        </div>
-      </div>
-    </div>
-  </div>
+    <div class="navbar-collapse collapse" id="navbar-collapse" aria-expanded="false" style="height: 1px;">
+      <ul class="nav navbar-nav navbar-right">
+        <% if @sites == 'home' %>
+            <li>
+              <%= link_to '首页',homes_path,class:'active' %>
+            </li>
+        <% else %>
+            <li>
+              <%= link_to '首页',homes_path %></li>
+        <% end %>
+        <% if @sites == 'info' %>
+            <li>
+              <%= link_to '最新资讯',infos_path,class:'active' %></li>
+        <% else %>
+            <li>
+              <%= link_to '最新资讯',infos_path %></li>
+        <% end %>
+        <% if @sites == 'install' %>
+            <li>
+              <%= link_to '工程案例',installs_path,class:'active' %></li>
+        <% else %>
+            <li>
+              <%= link_to '工程案例',installs_path %></li>
+        <% end %>
+        <% if @sites == 'service' %>
+            <li>
+              <%= link_to '用户中心',services_path,class:'active' %></li>
+        <% else %>
+            <li>
+              <%= link_to '用户中心',services_path %></li>
+        <% end %>
+        <% if @sites == 'active' %>
+            <li>
+              <%= link_to '关于我们',actives_path,class:'active' %></li>
+        <% else %>
+            <li>
+              <%= link_to '关于我们',actives_path %></li>
+        <% end %>
+        <% if @sites == 'about' %>
+            <li>
+              <%= link_to '帮助中心',abouts_path,class:'active' %></li>
+        <% else %>
+            <li>
+              <%= link_to '帮助中心',abouts_path %></li>
+        <% end %>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container -->
+</nav>
 
-  <!--页头 End-->
-</div>
-<!--页头 End-->
 <div id="fullDiv">
   <div id="side">
     <ul id="menu">
@@ -54,8 +110,8 @@
 
   <div class="section section1">
     <div class="s1-bg"></div>
-    <div class="s1-con">
-      <div class="s1-txt"><img src="../image/txt.png" alt="家居配送、安装、维修、返货直接找万师傅"></div>
+    <div class="s1-con" style="width: 80%;max-width: 800px;" >
+      <div class="s1-txt" style="width: 100%" ><img style="width: 100%" src="../image/txt.png" alt="家居配送、安装、维修、返货直接找万师傅"></div>
       <div class="s1-btn">
 
       </div>
@@ -67,10 +123,10 @@
       <div class="s2-bg-btm-wrap"><div class="s2-bg-top"></div></div>
       <div class="s2-top">
         <div class="topleft"></div>
-        <div class="topright">
+        <div class="topright" style="padding-left: 10%;">
           <div class="s2-null"></div>
-          <p class="t1"><img src="../image/t1.png" alt="让用户自由选择"/></p>
-          <p class="ts1"><img src="../image/ts1.png" alt="一个订单多个师傅报价，任意挑选"/></p>
+          <p class="t1" style="width: 90%;max-width: 550px;"><img style="width: 100%;" src="../image/t1.png" alt="让用户自由选择"/></p>
+          <p class="ts1" style="width: 90%;max-width: 600px;"><img style="width: 100%;" src="../image/ts1.png" alt="一个订单多个师傅报价，任意挑选"/></p>
         </div>
       </div>
     </div>
@@ -78,10 +134,10 @@
     <div id="s2-wrap-btm">
       <div class="s2-bg-btm-wrap"><div class="s2-bg-btm"></div></div>
       <div class="s2-btm">
-        <div class="btmleft">
+        <div class="btmleft" style="padding-left: 10%;">
           <div class="s2-null"></div>
-          <p class="t2"><img src="../image/t2.png" alt="让师傅自主经营"/></p>
-          <p class="ts2"><img src="../image/ts2.png" alt="告别派单模式，师傅自由报价接单"/></p>
+          <p class="t2" style="width: 90%;max-width: 600px;"><img style="width: 100%;" src="../image/t2.png" alt="让师傅自主经营"/></p>
+          <p class="ts2" style="width: 90%;max-width: 600px;"><img style="width: 100%;" src="../image/ts2.png" alt="告别派单模式，师傅自由报价接单"/></p>
         </div>
         <div class="btmright"></div>
       </div>
@@ -97,9 +153,9 @@
       <div class="s3-item">
         <div class="service">
           <ul>
-            <li class="ser1"><img src="../image/s3t1.png"/><p class="ser-txt">拥有百位经验丰富师傅<br/>让你有更多选择</p></li>
-            <li class="ser2"><img src="../image/s3t2.png"/><p class="ser-txt">只需要下单，师傅上门安装</p></li>
-            <li class="ser3"><img src="../image/s3t3.png"/><p class="ser-txt">不需监督，安装让你放心<br/>避免出行不便</p></li>
+            <li class="ser1"><img src="../image/s3t1.png"/><p class="ser-txt" style="color: #fff;">拥有百位经验丰富师傅<br/>让你有更多选择</p></li>
+            <li class="ser2"><img src="../image/s3t2.png"/><p class="ser-txt" style="color: #fff;min-width: 240px;">只需要下单，师傅上门安装</p></li>
+            <li class="ser3" style="padding-left: 100px;"><img src="../image/s3t3.png"/><p class="ser-txt" style="color: #fff;">不需监督，安装让你放心，避免出行不便</p></li>
           </ul>
         </div>
       </div>
@@ -108,13 +164,13 @@
 
   <div class="section section4" >
     <div class="s4-bg"></div>
-    <div class="s4-con">
+    <div class="s4-con" style="width: 100%;max-width: 700px;">
       <div class="s4-top-layout">
-        <p class="shield"><img src="../image/sc4tt.png"/></p>
-        <p class="pro-service"><img src="../image/service.png"/></p>
+        <p class="shield"><img style="width: 100%;" src="../image/sc4tt.png"/></p>
+        <p class="pro-service"><img style="width: 100%;" src="../image/service.png"/></p>
         <p class="pro-more"></p>
       </div>
-      <div class="safe">
+      <div class="safe" style="width: 100%;">
         <ul>
           <li class="ser1">
             <img src="../image/s3c1.png"><img src="../image/s4t1.png"/>

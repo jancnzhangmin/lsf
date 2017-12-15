@@ -1,67 +1,98 @@
-<div class="top-layer">
-  <!--页头 Begin-->
-  <div class="g-index-head">
-    <div class="top-menu">
-      <div>
-        <ul class="menu-nav">
-
-        </ul>
-        <script type="text/javascript">if (isLogin) {
-            $('.menu-nav .is_login').removeClass('hide');
-            $('.menu-nav .regis,.menu-nav .login').remove();
-            var info = _info_.split(',');
-            $("#account").text(info[0]);
-            $("#msg-num").text('（' + info[1] + '）');
-        }</script>
-      </div>
+<style>
+    .navbar-brand {
+        width: 110px;
+        height: auto;
+        padding: 7.5px 15px;
+    }
+    .navbar-brand__img {
+        width: 100%;
+    }
+    .navbar-toggle {
+        margin-top: 17px;
+        margin-bottom: 17px;
+    }
+    .navbar-collapse>ul>li>a {
+        display: inline-block;
+        height: 82px;
+        text-align: center;
+        font-size: 16px;
+        text-decoration: none;
+        color: #fff;
+        vertical-align: top;
+        margin: 0 21px;
+        padding: 30px 10px 10px 5px;
+        position: relative;
+    }
+    .nav > li > a:hover, .nav > li > a:focus {
+        text-decoration: none;
+        background-color: inherit;
+        color: #0081cc;
+    }
+    .active {
+        color: #0081cc;
+    }
+</style>
+<nav class="navbar navbar-fixed-top  navbar-without-shadow" style="background-color: rgba(0,0,0,0.7);">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" >
+        <span class="sr-only">导航</span>
+        <span class="icon-bar" style="background: #fff;"></span>
+        <span class="icon-bar" style="background: #fff;"></span>
+        <span class="icon-bar" style="background: #fff;"></span>
+      </button>
+      <a class="navbar-brand" href="/">
+        <%= image_tag 'liushushu_logo_web.png',class:"navbar-brand__img"%>
+      </a>
     </div>
-    <div class="head">
-      <div>
-        <div class="logo clearfix">
-          <h1 style="margin:0;padding:0;display:inline"><a href="#" class="Head-logo">
-            <%= image_tag 'liushushu_logo_web.png',height:100 %>
-          </a></h1>
-          <div style="position: absolute;top: 22px;right: 110px;max-width:120px;max-height:50px;overflow:hidden">
-          </div>
-        </div>
 
-        <div class="nav-link">
-          <% if @sites == 'home' %>
-          <%= link_to '首页',homes_path,class:'active' %>
-              <% else %>
-              <%= link_to '首页',homes_path %>
-              <% end %>
-          <% if @sites == 'info' %>
-              <%= link_to '最新资讯',infos_path,class:'active' %>
-          <% else %>
-              <%= link_to '最新资讯',infos_path %>
-          <% end %>
-          <% if @sites == 'install' %>
-              <%= link_to '工程案例',installs_path,class:'active' %>
-          <% else %>
-              <%= link_to '工程案例',installs_path %>
-          <% end %>
-          <% if @sites == 'service' %>
-              <%= link_to '用户中心',services_path,class:'active' %>
-          <% else %>
-              <%= link_to '用户中心',services_path %>
-          <% end %>
-          <% if @sites == 'active' %>
-              <%= link_to '关于我们',actives_path,class:'active' %>
-          <% else %>
-              <%= link_to '关于我们',actives_path %>
-          <% end %>
-          <% if @sites == 'about' %>
-              <%= link_to '帮助中心',abouts_path,class:'active' %>
-          <% else %>
-              <%= link_to '帮助中心',abouts_path %>
-          <% end %>
+    <div class="navbar-collapse collapse" id="navbar-collapse" aria-expanded="false" style="height: 1px;">
+      <ul class="nav navbar-nav navbar-right">
+        <% if @sites == 'home' %>
+            <li>
+              <%= link_to '首页',homes_path,class:'active' %>
+            </li>
+        <% else %>
+            <li>
+              <%= link_to '首页',homes_path %></li>
+        <% end %>
+        <% if @sites == 'info' %>
+            <li>
+              <%= link_to '最新资讯',infos_path,class:'active' %></li>
+        <% else %>
+            <li>
+              <%= link_to '最新资讯',infos_path %></li>
+        <% end %>
+        <% if @sites == 'install' %>
+            <li>
+              <%= link_to '工程案例',installs_path,class:'active' %></li>
+        <% else %>
+            <li>
+              <%= link_to '工程案例',installs_path %></li>
+        <% end %>
+        <% if @sites == 'service' %>
+            <li>
+              <%= link_to '用户中心',services_path,class:'active' %></li>
+        <% else %>
+            <li>
+              <%= link_to '用户中心',services_path %></li>
+        <% end %>
+        <% if @sites == 'active' %>
+            <li>
+              <%= link_to '关于我们',actives_path,class:'active' %></li>
+        <% else %>
+            <li>
+              <%= link_to '关于我们',actives_path %></li>
+        <% end %>
+        <% if @sites == 'about' %>
+            <li>
+              <%= link_to '帮助中心',abouts_path,class:'active' %></li>
+        <% else %>
+            <li>
+              <%= link_to '帮助中心',abouts_path %></li>
+        <% end %>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container -->
+</nav>
 
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!--页头 End-->
-</div>
-<!--页头 End-->

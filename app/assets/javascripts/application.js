@@ -12,5 +12,18 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require jquery.min.js
+//= require application.js
+//= require bootstrap.js
+//= require cable.js
+//= require home.js
 
-//= require_tree .
+//= require iscroll.js
+//= require jquery.fullPage.min.js
+//= require abouts.coffee
+//= require actives.coffee
+//= require homes.coffee
+//= require infos.coffee
+//= require installs.coffee
+//= require plans.coffee
+//= require services.coffee
